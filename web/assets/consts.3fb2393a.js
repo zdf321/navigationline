@@ -1,0 +1,2 @@
+import{R as e}from"./index.dcc91eec.js";const n=[{name:"\u6211\u7684\u6587\u4EF6",path:e.SELF_FILE,needLogin:!0},{name:"\u5BFC\u822A\u5927\u5168",path:e.NAV_RES,needLogin:!1},{name:"\u5165\u95E8\u6559\u7A0B",path:e.GETTING_STARTED,needLogin:!1}],a=[{name:"\u5E2E\u52A9\u624B\u518C",path:e.GETTING_STARTED,needLogin:!1},{name:"\u670D\u52A1\u6761\u6B3E",path:e.TOS,needLogin:!1},{name:"\u5173\u4E8E\u6211\u4EEC",path:e.ABOUT,needLogin:!1},{name:"\u5347\u7EA7",path:e.UPGRADE,needLogin:!0}];export{a as b,n as h};
+//# sourceMappingURL=consts.3fb2393a.js.map

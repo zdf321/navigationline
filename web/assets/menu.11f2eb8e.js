@@ -1,0 +1,2 @@
+import{M as u}from"./menuValueEnum.ea7dad60.js";const e={icon:"menu-self-file",text:"\u6211\u7684\u6587\u4EF6",value:u.MY_FILE,spaceId:null},n={icon:"menu-recent-changes",text:"\u6700\u8FD1\u4FEE\u6539",value:u.RECENT_CHANGE,spaceId:null},t={icon:"menu-recycle-bin",text:"\u56DE\u6536\u7AD9",value:u.RECYLE_BIN,spaceId:null},c={icon:"menu-star",text:"\u6211\u7684\u5E38\u7528",value:u.MY_COMMON_USE},a={icon:"menu-recent",text:"\u6700\u8FD1\u6253\u5F00",value:u.RECENT_OPEN};export{c as M,e as a,n as b,t as c,a as d};
+//# sourceMappingURL=menu.11f2eb8e.js.map

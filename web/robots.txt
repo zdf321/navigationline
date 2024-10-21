@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /scripts/
+Disallow: /public/
+Disallow: /css/
+Disallow: /images/
+Disallow: /content/
+Disallow: /ui/
+Disallow: /js/
+Sitemap: https://www.navigationline.cn/sitemap.txt
