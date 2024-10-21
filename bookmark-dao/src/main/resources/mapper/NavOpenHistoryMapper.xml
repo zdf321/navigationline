@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.xbookmark.dao.mapper.NavOpenHistoryMapper">
+
+    <resultMap id="BaseResultMap" type="net.xbookmark.dao.model.NavOpenHistoryEntity">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="uid" column="uid" jdbcType="VARCHAR"/>
+            <result property="teamId" column="team_id" jdbcType="VARCHAR"/>
+            <result property="navId" column="nav_id" jdbcType="VARCHAR"/>
+            <result property="creatorId" column="creator_id" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updaterId" column="updater_id" jdbcType="VARCHAR"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,uid,team_id,
+        nav_id,creator_id,create_time,
+        updater_id,update_time
+    </sql>
+
+    <select id="getRecentOpenList" resultType="net.xbookmark.dao.model.NavEntity">
+        SELECT
+            n.*
+        FROM
+            tb_nav_open_history h
+                INNER JOIN (
+                SELECT
+                    max( h.id ) AS max_id
+                FROM
+                    `tb_nav_open_history` h
+                WHERE
+                    h.team_id = #{teamId}
+                  AND h.uid = #{uid}
+                GROUP BY
+                    h.nav_id
+            ) t ON h.id = t.max_id
+                INNER JOIN tb_nav n ON h.nav_id = n.id and n.del_flag = 0
+        ORDER BY
+            h.create_time DESC
+        LIMIT 100
+    </select>
+</mapper>
