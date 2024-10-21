@@ -1,2 +1,0 @@
-import{d as c,v as r,u as a,R as i,o as l,l as m}from"./index.dcc91eec.js";import{u as p}from"./usePage.57f3776c.js";const d=c({__name:"LoginSuccess",setup(_){let o=r("$cookies"),t=u(window.location.hash);o.config("7d"),o.set("x-access-token",t);const n=a(),s=p();n.oauthLogin(),setTimeout(()=>{s(i.SELF_FILE)},500);function u(e){return e.slice(e.indexOf("=")+1,e.length)}return(e,f)=>(l(),m("span",null,"\u767B\u5F55\u6210\u529F\uFF0C\u6B63\u5728\u8DF3\u8F6C......"))}});export{d as default};
-//# sourceMappingURL=LoginSuccess.12fa4260.js.map

@@ -1,0 +1,2 @@
+import{V as o}from"./vue3-marquee.es.7ea2532a.js";import{d as u,r as t,M as n,o as r,h as c,w as l,k as _,f}from"./index.96d3aca4.js";const v=u({__name:"test",setup(p){const e=t(),s=t(!0);return n(()=>{var a;console.log("html:",e.value),console.log("width:",(a=e.value)==null?void 0:a.clientWidth)}),(a,m)=>(r(),c(f(o),{"pause-on-hover":"",pause:s.value,duration:10,class:"marquee-my"},{default:l(()=>[_("div",{class:"content",ref_key:"myRef",ref:e},"\u65E0\u9521\u5F62",512)]),_:1},8,["pause"]))}});export{v as default};
+//# sourceMappingURL=test.294596e7.js.map
