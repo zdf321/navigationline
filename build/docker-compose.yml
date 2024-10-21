@@ -1,7 +1,7 @@
 version: '3'
 services:
   nav:
-    image: navigationline
+    image: wxzhangdf/navigationline
     container_name: navigationline
     ports:
       - "9523:9523"
