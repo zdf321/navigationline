@@ -1,0 +1,37 @@
+version: '3'
+services:
+  nav:
+    image: navigationline
+    container_name: navigationline
+    ports:
+      - "9523:9523"
+    networks:
+      - nav-network
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/nav?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=navigationline123
+      - SPRING_REDIS_HOST=redis
+      - SPRING_REDIS_DATABASE=0
+
+  mysql:
+    image: mysql:8.0.33
+    container_name: mysql_nav
+    environment:
+      MYSQL_ROOT_PASSWORD: navigationline123
+      MYSQL_DATABASE: nav
+    volumes:
+      - ./init_mysql.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - nav-network
+
+  redis:
+    image: redis:alpine
+    container_name: redis_nav
+    networks:
+      - nav-network
+
+networks:
+  nav-network:
+    driver: bridge
+
