@@ -54,7 +54,7 @@ public class FileServiceImpl implements FileService {
             throw new BusinessException(StatusCode.FAILED, "上传失败");
         }
 
-        return key;
+        return this.getFilePrefilePath(key);
     }
 
     @Override
